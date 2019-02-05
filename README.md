@@ -40,6 +40,7 @@ For example, the repository contains a folder 'beginner_tutorials', which we wil
 **Step 3)** 
 
 Create a symbolic link between the folder of interest, e.g. `beginner_tutorials` and the package folder with the same name in the catkin ROS workspace created above. 
+
 In this example we assume that the root folder for beginner_tutorials is already present in your ROS workspace. 
 Also make sure all the python scripts are executable:
 Run:
@@ -51,6 +52,7 @@ find . -name “*.py” -exec chmod +x {} \;
 catkin_make
 source ~/catkin/devel/setup.bash
 ```
+
 Thats it !, you should now be able to run any ROS command that interacts with packages.
 
 
