@@ -38,17 +38,26 @@ For example, the repository contains a folder 'beginner_tutorials', which we wil
 
 **Step 3)** 
 
-Create a symbolic link between the folder of interest, e.g. `beginner_tutorials` and the package folder with the same name in the catkin ROS workspace created above. 
+Create a symbolic link between the folder of interest, e.g. `beginner_tutorials` and the src folder in your catkin workspace.
+Note that you may already have a `beginner_tutorials` package that you may have created in a previous lab. We will remove that folder and symbolically link our git repo with the workspace. 
 
-In this example we assume that the root folder for `beginner_tutorials` is already present in your ROS workspace. 
-Also make sure all the python scripts are executable:
+Depending on your ROS workspace. First remove the beginner_tutorials directory and its contents. 
+
+~~~bash
+madhur@ubuntu:~$ cd ~/catkin_ws/src/
+madhur@ubuntu:~/catkin_ws/src$ rm -rf beginner_tutorials/
+~~~
+
+In this example we assume that the root folder for the workspace source does not contain a `beginner_tutorials` directory.
+We will make sure all the python scripts are executable:
 Run:
 
 ~~~bash
-ln -s ~/github/f1tenth-course-labs/beginner_tutorials/scripts ~/catkin_ws/src/beginner_tutorials/
+ln -s ~/github/f1tenth-course-labs/beginner_tutorials ~/catkin_ws/src/
 cd ~/catkin_ws
 find . -name “*.py” -exec chmod +x {} \;
 catkin_make
+source ~/catkin/devel/setup.bash
 ~~~
 
 Thats it !, you should now be able to run any ROS command that interacts with packages.
