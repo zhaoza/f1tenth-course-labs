@@ -20,8 +20,8 @@ def control(data):
 
 	## Your code goes here
 	# 1. Scale the error
-	# 2. Apply the PID equation on error
-	# 3. Make sure the error is within bounds
+	# 2. Apply the PID equation on error to compute steering
+	# 3. Make sure the steering value is within bounds for talker.py
  	
 
 	## END
